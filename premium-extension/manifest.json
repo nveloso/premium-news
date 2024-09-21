@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Portuguese newspaper premium access",
+    "description": "Get access to portuguese newspaper premium articles without an account",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": ["http://observador.pt/*", "https://observador.pt/*"],
+            "js": ["observador-premium.js"],
+            "run_at" : "document_idle"
+        },
+        {
+            "matches": ["http://eco.sapo.pt/*", "https://eco.sapo.pt/*"],
+            "js": ["showdown.min.js", "eco-premium.js"],
+            "run_at" : "document_idle"
+        }
+    ]
+}
